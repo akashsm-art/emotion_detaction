@@ -1,0 +1,128 @@
+{
+  "architecture": "AlexNet (torchvision pretrained backbone)",
+  "checkpoint": "models/vision/model_image_new50.pth",
+  "validation_samples": 2621,
+  "accuracy": 0.3739030904235025,
+  "macro_precision": 0.43558626937200895,
+  "macro_recall": 0.3316767700491633,
+  "macro_f1": 0.3258429730130907,
+  "weighted_f1": 0.3362917989362773,
+  "per_class": {
+    "angry": {
+      "precision": 0.5545,
+      "recall": 0.1685,
+      "f1": 0.2585,
+      "support": 362
+    },
+    "disgust": {
+      "precision": 0.5146,
+      "recall": 0.2896,
+      "f1": 0.3706,
+      "support": 366
+    },
+    "fear": {
+      "precision": 0.4711,
+      "recall": 0.1686,
+      "f1": 0.2484,
+      "support": 338
+    },
+    "happy": {
+      "precision": 0.615,
+      "recall": 0.4187,
+      "f1": 0.4982,
+      "support": 332
+    },
+    "neutral": {
+      "precision": 0.3236,
+      "recall": 0.9381,
+      "f1": 0.4812,
+      "support": 533
+    },
+    "sad": {
+      "precision": 0.2731,
+      "recall": 0.1752,
+      "f1": 0.2135,
+      "support": 371
+    },
+    "surprise": {
+      "precision": 0.2971,
+      "recall": 0.163,
+      "f1": 0.2105,
+      "support": 319
+    }
+  },
+  "confusion_matrix": [
+    [
+      61,
+      24,
+      9,
+      20,
+      175,
+      46,
+      27
+    ],
+    [
+      15,
+      106,
+      15,
+      12,
+      121,
+      93,
+      4
+    ],
+    [
+      8,
+      14,
+      57,
+      4,
+      172,
+      25,
+      58
+    ],
+    [
+      0,
+      3,
+      0,
+      139,
+      178,
+      0,
+      12
+    ],
+    [
+      1,
+      0,
+      0,
+      18,
+      500,
+      1,
+      13
+    ],
+    [
+      5,
+      47,
+      0,
+      18,
+      227,
+      65,
+      9
+    ],
+    [
+      20,
+      12,
+      40,
+      15,
+      172,
+      8,
+      52
+    ]
+  ],
+  "class_order": [
+    "angry",
+    "disgust",
+    "fear",
+    "happy",
+    "neutral",
+    "sad",
+    "surprise"
+  ]
+}

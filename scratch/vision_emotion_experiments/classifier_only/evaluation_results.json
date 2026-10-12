@@ -1,0 +1,261 @@
+{
+  "best_validation_accuracy_during_training": 0.3651,
+  "best_validation_macro_f1_during_training": 0.3057,
+  "best_epoch": 1,
+  "final_evaluation": {
+    "accuracy": 0.3651,
+    "macro_f1": 0.3057,
+    "total_samples": 2621,
+    "correct": 957,
+    "per_class": {
+      "angry": {
+        "precision": 0.6757,
+        "recall": 0.0691,
+        "f1": 0.1253,
+        "support": 362
+      },
+      "disgust": {
+        "precision": 0.5226,
+        "recall": 0.2842,
+        "f1": 0.3681,
+        "support": 366
+      },
+      "fear": {
+        "precision": 0.4393,
+        "recall": 0.1391,
+        "f1": 0.2112,
+        "support": 338
+      },
+      "happy": {
+        "precision": 0.5418,
+        "recall": 0.488,
+        "f1": 0.5135,
+        "support": 332
+      },
+      "neutral": {
+        "precision": 0.3224,
+        "recall": 0.9231,
+        "f1": 0.4779,
+        "support": 533
+      },
+      "sad": {
+        "precision": 0.258,
+        "recall": 0.1968,
+        "f1": 0.2232,
+        "support": 371
+      },
+      "surprise": {
+        "precision": 0.3176,
+        "recall": 0.1693,
+        "f1": 0.2209,
+        "support": 319
+      }
+    },
+    "confusion_matrix": [
+      [
+        25,
+        24,
+        17,
+        29,
+        178,
+        71,
+        18
+      ],
+      [
+        5,
+        104,
+        9,
+        28,
+        122,
+        94,
+        4
+      ],
+      [
+        0,
+        14,
+        47,
+        9,
+        175,
+        27,
+        66
+      ],
+      [
+        0,
+        3,
+        1,
+        162,
+        157,
+        0,
+        9
+      ],
+      [
+        0,
+        0,
+        0,
+        23,
+        492,
+        5,
+        13
+      ],
+      [
+        0,
+        42,
+        1,
+        29,
+        220,
+        73,
+        6
+      ],
+      [
+        7,
+        12,
+        32,
+        19,
+        182,
+        13,
+        54
+      ]
+    ],
+    "class_names": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ]
+  },
+  "training_history": {
+    "train_loss": [
+      1.4394393263291472,
+      1.410711683585652,
+      1.3992838072024607,
+      1.3759195757089437,
+      1.3415789855198585,
+      1.3189524073859793
+    ],
+    "train_acc": [
+      0.4654068158456551,
+      0.4762394243694157,
+      0.48074642207638174,
+      0.49387206452123034,
+      0.5016209377718036,
+      0.5079465485885981
+    ],
+    "valid_loss": [
+      1.7317887395449787,
+      1.7410429999465389,
+      1.7419135821133978,
+      1.6996253223102633,
+      1.733182203810618,
+      1.7079889652884583
+    ],
+    "valid_acc": [
+      0.3651278138115223,
+      0.3674170164059519,
+      0.36016787485692486,
+      0.3647462800457841,
+      0.36169400991987793,
+      0.3655093475772606
+    ],
+    "valid_macro_f1": [
+      0.3057376989550723,
+      0.3041379624964123,
+      0.28696874049478477,
+      0.30438807978231214,
+      0.2922508836848458,
+      0.3013961718000123
+    ],
+    "valid_per_class_f1": [
+      {
+        "angry": 0.1253,
+        "disgust": 0.3681,
+        "fear": 0.2112,
+        "happy": 0.5135,
+        "neutral": 0.4779,
+        "sad": 0.2232,
+        "surprise": 0.2209
+      },
+      {
+        "angry": 0.1425,
+        "disgust": 0.381,
+        "fear": 0.0826,
+        "happy": 0.5331,
+        "neutral": 0.4852,
+        "sad": 0.231,
+        "surprise": 0.2736
+      },
+      {
+        "angry": 0.0528,
+        "disgust": 0.424,
+        "fear": 0.0982,
+        "happy": 0.511,
+        "neutral": 0.4696,
+        "sad": 0.1766,
+        "surprise": 0.2767
+      },
+      {
+        "angry": 0.0916,
+        "disgust": 0.3975,
+        "fear": 0.2323,
+        "happy": 0.5253,
+        "neutral": 0.4718,
+        "sad": 0.1574,
+        "surprise": 0.2549
+      },
+      {
+        "angry": 0.1066,
+        "disgust": 0.3906,
+        "fear": 0.112,
+        "happy": 0.5253,
+        "neutral": 0.4698,
+        "sad": 0.1402,
+        "surprise": 0.3012
+      },
+      {
+        "angry": 0.0579,
+        "disgust": 0.413,
+        "fear": 0.2308,
+        "happy": 0.5321,
+        "neutral": 0.4713,
+        "sad": 0.1486,
+        "surprise": 0.2561
+      }
+    ]
+  },
+  "config": {
+    "architecture": "AlexNet (torchvision, warm-started from existing face checkpoint)",
+    "num_classes": 7,
+    "optimizer": "AdamW(classifier_only, classifier.1/4=1e-4, classifier.6=5e-4, weight_decay=1e-4)",
+    "scheduler": "CosineAnnealingLR(T_max=20, eta_min=1e-6)",
+    "batch_size": 64,
+    "max_epochs": 20,
+    "epochs_trained": 6,
+    "early_stopping_patience": 5,
+    "seed": 42,
+    "trainable_layers": [
+      "classifier.1.bias",
+      "classifier.4",
+      "classifier.6"
+    ],
+    "trainable_params": [
+      "classifier.1.bias",
+      "classifier.4.weight",
+      "classifier.4.bias",
+      "classifier.6.weight",
+      "classifier.6.bias"
+    ],
+    "loss": "CrossEntropyLoss with inverse-frequency class weights",
+    "class_weight_strength": 0.5,
+    "label_smoothing": 0.0,
+    "experiment_name": "classifier_only",
+    "frame_strategy": "all",
+    "frames_per_clip": null,
+    "fine_tune_depth": "classifier_only",
+    "selection_metric": "validation macro-F1",
+    "train_augmentation": "horizontal flip, affine +/-5deg / 4% translation / 0.92-1.08 scale, mild color jitter",
+    "train_samples": 12647,
+    "valid_samples": 2621
+  }
+}

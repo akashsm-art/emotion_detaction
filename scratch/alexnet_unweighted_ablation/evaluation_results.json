@@ -1,0 +1,217 @@
+{
+  "best_validation_accuracy_during_training": 0.4029,
+  "best_validation_macro_f1_during_training": 0.3563,
+  "final_evaluation": {
+    "accuracy": 0.4029,
+    "macro_f1": 0.3562,
+    "total_samples": 2621,
+    "correct": 1056,
+    "per_class": {
+      "angry": {
+        "precision": 0.4946,
+        "recall": 0.1271,
+        "f1": 0.2022,
+        "support": 362
+      },
+      "disgust": {
+        "precision": 0.4894,
+        "recall": 0.4426,
+        "f1": 0.4648,
+        "support": 366
+      },
+      "fear": {
+        "precision": 0.5109,
+        "recall": 0.2071,
+        "f1": 0.2947,
+        "support": 338
+      },
+      "happy": {
+        "precision": 0.605,
+        "recall": 0.512,
+        "f1": 0.5546,
+        "support": 332
+      },
+      "neutral": {
+        "precision": 0.3484,
+        "recall": 0.8968,
+        "f1": 0.5018,
+        "support": 533
+      },
+      "sad": {
+        "precision": 0.3093,
+        "recall": 0.1617,
+        "f1": 0.2124,
+        "support": 371
+      },
+      "surprise": {
+        "precision": 0.3286,
+        "recall": 0.2194,
+        "f1": 0.2632,
+        "support": 319
+      }
+    },
+    "confusion_matrix": [
+      [
+        46,
+        59,
+        5,
+        11,
+        167,
+        50,
+        24
+      ],
+      [
+        16,
+        162,
+        13,
+        12,
+        115,
+        44,
+        4
+      ],
+      [
+        3,
+        25,
+        70,
+        6,
+        138,
+        26,
+        70
+      ],
+      [
+        0,
+        3,
+        3,
+        170,
+        136,
+        0,
+        20
+      ],
+      [
+        0,
+        2,
+        3,
+        33,
+        478,
+        1,
+        16
+      ],
+      [
+        16,
+        61,
+        3,
+        26,
+        196,
+        60,
+        9
+      ],
+      [
+        12,
+        19,
+        40,
+        23,
+        142,
+        13,
+        70
+      ]
+    ],
+    "class_names": [
+      "angry",
+      "disgust",
+      "fear",
+      "happy",
+      "neutral",
+      "sad",
+      "surprise"
+    ]
+  },
+  "training_history": {
+    "train_loss": [
+      1.365496057893595,
+      1.2477982430493133,
+      1.159655991727546,
+      1.0662037018137769,
+      0.9632412063243163,
+      0.9004122237117806,
+      0.8460571435003627,
+      0.7872123607884493,
+      0.7344674801575748
+    ],
+    "train_acc": [
+      0.49213252154661186,
+      0.5403653040246699,
+      0.5704119554044438,
+      0.6097098126037795,
+      0.6487704593974856,
+      0.6706728868506365,
+      0.695342769036135,
+      0.7121847078358504,
+      0.7338499248833715
+    ],
+    "valid_loss": [
+      1.8129699375737673,
+      1.868611842791846,
+      1.7550953867234422,
+      1.6828774059605662,
+      1.8612205403217692,
+      1.7568158243776777,
+      1.7937017784733573,
+      1.7742718653295022,
+      1.9195189613369938
+    ],
+    "valid_acc": [
+      0.3586417397939718,
+      0.36398321251430754,
+      0.3868752384586036,
+      0.40289965661961086,
+      0.3761922930179321,
+      0.3884013735215567,
+      0.38267836703548264,
+      0.3906905761159863,
+      0.3864937046928653
+    ],
+    "valid_macro_f1": [
+      0.2937500191563983,
+      0.3026906975782212,
+      0.33000355261930625,
+      0.3562596871704811,
+      0.32208226925609734,
+      0.3507916001653527,
+      0.3498838468829217,
+      0.3548528131404133,
+      0.3422619048780092
+    ]
+  },
+  "config": {
+    "architecture": "AlexNet (torchvision, warm-started from existing face checkpoint)",
+    "num_classes": 7,
+    "optimizer": "AdamW(features.10=2e-5, classifier.1/4=1e-4, classifier.6=5e-4, weight_decay=1e-4)",
+    "scheduler": "CosineAnnealingLR(T_max=20, eta_min=1e-6)",
+    "batch_size": 64,
+    "max_epochs": 20,
+    "epochs_trained": 9,
+    "early_stopping_patience": 5,
+    "seed": 42,
+    "trainable_layers": [
+      "features.10",
+      "classifier.1.bias",
+      "classifier.4",
+      "classifier.6"
+    ],
+    "trainable_params": [
+      "features.10.weight",
+      "features.10.bias",
+      "classifier.1.bias",
+      "classifier.4.weight",
+      "classifier.4.bias",
+      "classifier.6.weight",
+      "classifier.6.bias"
+    ],
+    "loss": "CrossEntropyLoss with inverse-frequency class weights",
+    "class_weight_strength": 0.0,
+    "selection_metric": "validation macro-F1",
+    "train_augmentation": "horizontal flip, affine +/-5deg / 4% translation / 0.92-1.08 scale, mild color jitter",
+    "train_samples": 12647,
+    "valid_samples": 2621
+  }
+}
